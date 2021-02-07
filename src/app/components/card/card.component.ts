@@ -25,7 +25,9 @@ export class CardComponent implements OnInit {
         Validators.required,
         Validators.pattern('^((\\+91-?)|0)?[6-9][0-9]{9}$'),
       ]),
-      mobile2: new FormControl(''),
+      mobile2: new FormControl('', [
+        Validators.pattern('^((\\+91-?)|0)?[6-9][0-9]{9}$'),
+      ]),
       landmark: new FormControl('', [Validators.required]),
       street: new FormControl('', [Validators.required]),
       area: new FormControl('', [Validators.required]),
