@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CardComponent implements OnInit {
   card: Card;
-
+  // cardList: any = [];
   loginForm: FormGroup;
 
   constructor(private router: Router) {
@@ -72,6 +72,12 @@ export class CardComponent implements OnInit {
     'West Bengal',
   ];
   onSubmit() {
+    // if (localStorage.getItem('card')) {
+    //   this.cardList = JSON.parse(localStorage.getItem('card'));
+    // }
+    // this.cardList.push(this.card);
+    // localStorage.setItem('card', JSON.stringify(this.cardList));
+    // console.log(this.cardList);
     localStorage.setItem('card', JSON.stringify(this.card));
     console.log(this.card);
     this.router.navigate(['/visiting']);

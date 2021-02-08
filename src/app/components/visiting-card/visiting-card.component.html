@@ -1,6 +1,7 @@
 <div fxLayout="row wrap" fxLayoutAlign="space-around center">
   <div fxFlex.lg="50" fxFlex.md="70" fxFlex.sm="85" fxFlex.xs="90">
     <div class="color">
+      <!-- <main *ngFor="let card of cardList"> -->
       <div fxLayout="row wrap" fxLayoutAlign="space-around center">
         <div fxFlex="95">
           <h4>Cell : {{ card.mobile1 }}</h4>
@@ -14,13 +15,17 @@
           <div class="line"></div>
         </div>
         <div fxFlex="90">
-          <h5>{{ card.landmark }} , {{ card.street }} , {{ card.area }}</h5>
+          <h5>
+            {{ card.landmark }} , {{ card.street }} ,
+            {{ card.area }}
+          </h5>
           <h5 class="heading">
             {{ card.district }} , {{ card.city }} - {{ card.pincode }} ,
             {{ card.state }}
           </h5>
         </div>
       </div>
+      <!-- </main> -->
     </div>
   </div>
 </div>

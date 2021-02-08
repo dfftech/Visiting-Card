@@ -7,11 +7,11 @@ import { Card } from '../../entities/card.entity';
   styleUrls: ['./visiting-card.component.css'],
 })
 export class VisitingCardComponent implements OnInit {
-  @Input()
+  // cardList: Card[];
   card: Card;
 
   constructor() {
-    this.card = new Card();
+    // this.cardList = new Card();
     this.card = JSON.parse(localStorage.getItem('card'));
     console.log(this.card);
   }
